@@ -1,5 +1,5 @@
 <?php
-$servername = 'br-asc-web815.main-hosting.eu';
+$servername = 'localhost';
 $username = 'u455152201_cdevent';
 $password = 'Vg14072904';
 $database = 'u455152201_cdevent';
