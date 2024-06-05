@@ -94,7 +94,7 @@
     display: flex;
     flex-direction: row;
     overflow-x: auto;
-    padding: 8px 0 15px 0;
+    padding: 0px 0 35px 0;
 }
 .cat::-webkit-scrollbar {
     height: 10px; /* width of the entire scrollbar */
@@ -108,7 +108,7 @@
 }
 .categoria > .cat > a > .links{
     border-radius: 200px;
-    margin-left: 10px;
+    /* width: 100%; */
 }
 /* DIVS DAS CATEGORIAS  */
 #corpo1 > .festas{
