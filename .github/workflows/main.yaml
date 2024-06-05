@@ -1,0 +1,35 @@
+name: Deploy system event hostinger
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.0'  # Atualiza para a versão de PHP 8.0
+#  cd api  # Define o diretório "api" como diretório de trabalho
+#         composer install  # Executa o comando "composer install" 
+    - name: Install dependencies 
+      run: |
+       
+
+    - name: Deploy system event hostinger
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0  
+      with:
+        server: ${{ secrets.FTP_HOST }}  # aqui você coloca undertakehigh.com.br
+        username: ${{ secrets.FTP_USER }}  # aqui você coloca u4551847364
+        password: ${{ secrets.FTP_PASSWORD }}  # aqui você coloca a senha ewoifhoewhfew
+        # local-dir: ./backend/  # Define o diretório "api" como diretório de trabalho e adiciona a barra final
+        server-dir:  /registration-event/  # Define a pasta "api" no servidor como o diretório de destino
+        # exclude: ./api/frontend/  # Excluir a pasta "frontend" durante a implantação
+        security: loose  # Define como "loose" para evitar erros de conexão   
